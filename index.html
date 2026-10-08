@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKIRA - Omakase | Córdoba</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#070708;color:#e8e6e1;font-family:Helvetica,Arial,sans-serif;letter-spacing:.5px}
+.nav{display:flex;justify-content:space-between;padding:25px 4%;border-bottom:1px solid #1a1a1a;font-size:.7rem;letter-spacing:4px}
+.hero{padding:10vh 4% 6vh;display:grid;grid-template-columns:1.2fr .8fr;gap:4%}
+.hero h1{font-size:clamp(3.5rem,9vw,7rem);line-height:.85;font-weight:300;letter-spacing:-3px}
+.hero h1 i{font-family:Georgia,serif;font-weight:100}
+.menu{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a}
+.menu-item{padding:40px 30px;border-right:1px solid #1a1a1a}
+.menu-item:last-child{border:none}
+.menu-item span{font-size:.65rem;letter-spacing:3px;opacity:.4}
+.menu-item h3{margin-top:20px;font-size:1.4rem;font-weight:300}
+.menu-item p{margin-top:15px;opacity:.6;line-height:1.6;font-size:.9rem}
+.video-wrap{height:70vh;overflow:hidden;background:#000}
+.video-wrap video{width:100%;height:100%;object-fit:cover;opacity:.9}
+.reserve{padding:80px 4%;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px}
+.btn{background:#e8e6e1;color:#070708;padding:18px 40px;text-decoration:none;letter-spacing:3px;font-size:.75rem;transition:.3s}
+.btn:hover{background:transparent;color:#e8e6e1;border:1px solid #e8e6e1}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.menu{grid-template-columns:1fr}.menu-item{border-right:none;border-bottom:1px solid #1a1a1a}}
+</style>
+</head>
+<body>
+<div class="nav"><span>AKIRA / CÓRDOBA</span><span>OMAKASE — 12 LUGARES</span></div>
+<section class="hero">
+<h1>AKIRA<br><i>Omakase</i><br>de Barrio</h1>
+<div style="padding-top:20px"><p style="opacity:.6;line-height:1.7;max-width:320px">Solo 12 lugares. El chef elige. Pescado de Mar del Plata, arroz de 3 años. Sin carta.<br><br>Miércoles a Sábado<br>20:30 / 23:00</p><br><br><a class="btn" href="https://wa.me/549351XXXXXXX">RESERVAR — WHATSAPP</a></div>
+</section>
+<div class="video-wrap"><video src="videos/hero.mp4" autoplay muted loop playsinline></video></div>
+<section class="menu">
+<div class="menu-item"><span>01 / NIGIRI</span><h3>Chutoro - Akami - Uni</h3><p>Atún rojo, 21 días de maduración. Algas de la costa. Wasabi real rallado en el momento.</p></div>
+<div class="menu-item"><span>02 / TEMPURA</span><h3>Langostino + Shiso</h3><p>Tempura liviana, aceite de sésamo. Hoja de shiso de huerta propia.</p></div>
+<div class="menu-item"><span>03 / SAKE</span><h3>Junmai Daiginjo</h3><p>Sake frío, copa de hielo. Importado de Kioto. Solo 3 botellas por noche.</p></div>
+</section>
+<section class="reserve">
+<div><h2 style="font-size:2.5rem;font-weight:300">Te esperamos en Güemes</h2><p style="opacity:.4;margin-top:10px">Tejeda 420, Córdoba — Solo con reserva</p></div>
+<a class="btn" href="https://wa.me/549351XXXXXXX">RESERVAR AHORA</a>
+</section>
+</body>
+</html>
