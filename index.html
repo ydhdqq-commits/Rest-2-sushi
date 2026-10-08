@@ -43,3 +43,21 @@ body{background:#070708;color:#e8e6e1;font-family:Helvetica,Arial,sans-serif;let
 </section>
 </body>
 </html>
+<style>
+.hero{position:relative;overflow:hidden;background:#000;isolation:isolate}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;filter:brightness(.6);transform:scale(1.1);animation:z 25s ease-in-out infinite alternate}
+@keyframes z{to{transform:scale(1.2)}}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%, transparent 20%, rgba(0,0,0,.6) 75%, #000 95%);z-index:1}
+.hero > *{position:relative;z-index:2}
+</style>
+<script>
+const h=document.querySelector('section')||document.body;
+if(!h.querySelector('video')){
+ let v=document.createElement('video');
+ v.autoplay=true;v.muted=true;v.loop=true;v.playsInline=true;
+ v.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35';
+ v.innerHTML='<source src="https://videos.pexels.com/video-files/18069234/18069234-uhd_1440_1440_24fps.mp4" type="video/mp4">';
+ h.style.position='relative';h.style.overflow='hidden';
+ h.prepend(v);
+}
+</script>
