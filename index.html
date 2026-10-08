@@ -1,63 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AKIRA - Omakase | Córdoba</title>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AKIRA / Córdoba</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#070708;color:#e8e6e1;font-family:Helvetica,Arial,sans-serif;letter-spacing:.5px}
-.nav{display:flex;justify-content:space-between;padding:25px 4%;border-bottom:1px solid #1a1a1a;font-size:.7rem;letter-spacing:4px}
-.hero{padding:10vh 4% 6vh;display:grid;grid-template-columns:1.2fr .8fr;gap:4%}
-.hero h1{font-size:clamp(3.5rem,9vw,7rem);line-height:.85;font-weight:300;letter-spacing:-3px}
-.hero h1 i{font-family:Georgia,serif;font-weight:100}
-.menu{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a}
-.menu-item{padding:40px 30px;border-right:1px solid #1a1a1a}
-.menu-item:last-child{border:none}
-.menu-item span{font-size:.65rem;letter-spacing:3px;opacity:.4}
-.menu-item h3{margin-top:20px;font-size:1.4rem;font-weight:300}
-.menu-item p{margin-top:15px;opacity:.6;line-height:1.6;font-size:.9rem}
-.video-wrap{height:70vh;overflow:hidden;background:#000}
-.video-wrap video{width:100%;height:100%;object-fit:cover;opacity:.9}
-.reserve{padding:80px 4%;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px}
-.btn{background:#e8e6e1;color:#070708;padding:18px 40px;text-decoration:none;letter-spacing:3px;font-size:.75rem;transition:.3s}
-.btn:hover{background:transparent;color:#e8e6e1;border:1px solid #e8e6e1}
-@media(max-width:800px){.hero{grid-template-columns:1fr}.menu{grid-template-columns:1fr}.menu-item{border-right:none;border-bottom:1px solid #1a1a1a}}
-</style>
-</head>
-<body>
-<div class="nav"><span>AKIRA / CÓRDOBA</span><span>OMAKASE — 12 LUGARES</span></div>
-<section class="hero">
-<h1>AKIRA<br><i>Omakase</i><br>de Barrio</h1>
-<div style="padding-top:20px"><p style="opacity:.6;line-height:1.7;max-width:320px">Solo 12 lugares. El chef elige. Pescado de Mar del Plata, arroz de 3 años. Sin carta.<br><br>Miércoles a Sábado<br>20:30 / 23:00</p><br><br><a class="btn" href="https://wa.me/549351XXXXXXX">RESERVAR — WHATSAPP</a></div>
-</section>
-<div class="video-wrap"><video src="videos/hero.mp4" autoplay muted loop playsinline></video></div>
-<section class="menu">
-<div class="menu-item"><span>01 / NIGIRI</span><h3>Chutoro - Akami - Uni</h3><p>Atún rojo, 21 días de maduración. Algas de la costa. Wasabi real rallado en el momento.</p></div>
-<div class="menu-item"><span>02 / TEMPURA</span><h3>Langostino + Shiso</h3><p>Tempura liviana, aceite de sésamo. Hoja de shiso de huerta propia.</p></div>
-<div class="menu-item"><span>03 / SAKE</span><h3>Junmai Daiginjo</h3><p>Sake frío, copa de hielo. Importado de Kioto. Solo 3 botellas por noche.</p></div>
-</section>
-<section class="reserve">
-<div><h2 style="font-size:2.5rem;font-weight:300">Te esperamos en Güemes</h2><p style="opacity:.4;margin-top:10px">Tejeda 420, Córdoba — Solo con reserva</p></div>
-<a class="btn" href="https://wa.me/549351XXXXXXX">RESERVAR AHORA</a>
-</section>
-</body>
-</html>
-<style>
-.hero{position:relative;overflow:hidden;background:#000;isolation:isolate}
-.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;filter:brightness(.6);transform:scale(1.1);animation:z 25s ease-in-out infinite alternate}
-@keyframes z{to{transform:scale(1.2)}}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%, transparent 20%, rgba(0,0,0,.6) 75%, #000 95%);z-index:1}
-.hero > *{position:relative;z-index:2}
-</style>
-<script>
-const h=document.querySelector('section')||document.body;
-if(!h.querySelector('video')){
- let v=document.createElement('video');
- v.autoplay=true;v.muted=true;v.loop=true;v.playsInline=true;
- v.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35';
- v.innerHTML='<source src="https://videos.pexels.com/video-files/18069234/18069234-uhd_1440_1440_24fps.mp4" type="video/mp4">';
- h.style.position='relative';h.style.overflow='hidden';
- h.prepend(v);
-}
-</script>
+body{background:#050505;color:#eee;font-family:system-ui,sans-serif}
+.top{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:18px 24px;font-size:10px;letter-spacing:.35em;z-index:30;background:rgba(0,0,0,.8);border-bottom:1px solid #111}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:90px 8vw 40px;overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.6}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(0,0,0,.2),#000 85%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:620px}
+.hero h1{font-size:16vw;line-height:.82;font-weight:200}
+.hero h1 i{font-family:Georgia,serif;font-style:italic}
+.hero p{margin-top:18px;color:#aaa;line-height:1.6;font-size:15px}
+.btn{display:inline-block;margin-top:26px;padding:16px 32px;background:#f0f0f0;color:#000;text-decoration:none;font-size:10px;letter-spacing:.3em}
+.sec{position:relative;min-height:60vh;padding:70px 8vw;border-top:1px solid #111;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.sec video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;filter:brightness(.7) contrast(1.1)}
+.sec::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 30%,rgba(0,0,0,.45) 100%);z-index:1}
+.sec > *{position:relative;z-index:2}
+.k{font-size:9px;letter-spacing:.45em;color:#888;margin-bottom:14px}
+.sec h3{font-size:28px;font-weight:300;margin-bottom:10px}
+.sec p{color:#888;max-width:520px;line-height:1.6;font-size:14px}
+.final{padding:80px 8vw;font-size:10vw;line-height:.9;font-weight:200}
+.final small{display:block;font-size:13px;color:#555;margin-top:14px}
+</style></head><body>
+<div class="top"><span>AKIRA / CÓRDOBA</span><span>OMAKASE — 12 LUGARES</span></div>
+<section class="hero"><video autoplay muted loop playsinline src="videos/fondo.mp4"></video><div class="hero-content"><h1>AKIRA<br><i>Omakase</i><br>de Barrio</h1><p>Solo 12 lugares. El chef elige. Pescado de Mar del Plata, arroz de 3 años. Sin carta.</p><div style="margin-top:14px;color:#555;font-size:12px">Miércoles a Sábado<br>20:30 / 23:00</div><a class="btn" href="#">RESERVAR — WHATSAPP</a></div></section>
+<section class="sec"><video autoplay muted loop playsinline src="videos/etiqueta1.mp4"></video><div class="k">01 / NIGIRI</div><h3>Chutoro - Akami - Uni</h3><p>Atún rojo, 21 días de maduración. Algas de la costa. Wasabi real rallado en el momento.</p></section>
+<section class="sec"><video autoplay muted loop playsinline src="videos/etiqueta2.mp4"></video><div class="k">02 / TEMPURA</div><h3>Langostino + Shiso</h3><p>Tempura liviana, aceite de sésamo. Hoja de shiso de huerta propia.</p></section>
+<section class="sec"><video autoplay muted loop playsinline src="videos/etiqueta3.mp4"></video><div class="k">03 / SAKE</div><h3>Junmai Daiginjo</h3><p>Sake frío, copa de hielo. Importado de Kioto. Solo 3 botellas por noche.</p></section>
+<div class="final">Te esperamos en<br>Güemes<small>Tejeda 420, Córdoba — Solo con reserva</small><a class="btn" href="#">RESERVAR AHORA</a></div>
+</body></html>
